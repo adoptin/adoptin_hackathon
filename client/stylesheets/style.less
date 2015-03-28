@@ -1,5 +1,30 @@
 @import "less/variables.import.less";
 
 body {
-	background-color: @background-color;
+	font-family: "Montserrat", sans-serif;
+	overflow: hidden;
+}
+
+.pet {
+	margin: @size auto;
+	.name {
+		display: block;
+	}
+	.avatar {
+		float: left;
+		padding-right: @size;
+	}
+	.breed {
+		display: inline-block;
+	}
+	.location {
+		font-size: 90%;
+		margin-left: @size;
+		color: grey;
+	}
+	.view {
+		padding: @size;
+		background-color: @brand-yellow-one;
+		margin-top: @size;
+	}
 }

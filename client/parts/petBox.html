@@ -1,13 +1,13 @@
 <template name="petBox">
-    <div class="row pet">
-      <div class="col-md-12">
-        <img src="{{image}}" class="img-responsive avatar">
-        <h3 class="name">{{name}}</h3>
-        <div class="details">
-          <p class="breed">{{breed}}</p>
-          <p class="location">{{location}}</p>
-        </div>
-        <a href="#" class="btn btn-default view">View</a>
-      </div>
-    </div>
+<div class="row pet">
+<div class="col-md-12">
+<img src="{{image}}" class="img-responsive avatar">
+<h3 class="name">{{name}}</h3>
+<div class="details">
+<p class="breed">{{breed}}</p>
+<p class="location">{{location}}</p>
+</div>
+<a href="/pet/{{_id}}" class="btn btn-default view">View</a>
+</div>
+</div>
 </template>
