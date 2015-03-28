@@ -6,5 +6,6 @@ Template.addAnimal.events({
 			image: event.target.image.value,
 			location: event.target.location.value,
 		});
+		FlowRouter.go('/');
 	}
 });
