@@ -7,6 +7,8 @@ Meteor.methods({
 
         newPet.owner = Meteor.userId();
 
-        Pets.insert(newPet);
+        newPet.date = new Date();
+
+        return Pets.insert(newPet);
     }
 })
