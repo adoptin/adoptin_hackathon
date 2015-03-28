@@ -1,5 +1,5 @@
 Meteor.methods({
-    addPet: function(newPet) {
+   'pet/add': function(newPet) {
 
         if (! Meteor.userId()) {
             throw new Meteor.Error("not-authorized");
@@ -7,6 +7,8 @@ Meteor.methods({
 
         newPet.owner = Meteor.userId();
 
-        Pets.insert(newPet);
+        newPet.date = new Date();
+
+        return Pets.insert(newPet);
     }
 })
