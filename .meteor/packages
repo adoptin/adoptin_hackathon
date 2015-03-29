@@ -12,3 +12,4 @@ less
 meteorhacks:flow-router
 meteorhacks:flow-layout
 mizzao:bootboxjs
+iron:router

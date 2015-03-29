@@ -1,8 +1,0 @@
-{
-  "name": "adopt.in",
-  "scripts": {
-    "start":"meteor",
-    "debug":"meteor debug"
-  },
-  "private": true
-}
