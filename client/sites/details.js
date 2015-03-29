@@ -1,5 +1,5 @@
 Template.details.helpers({
-    'pet': function() {
+    'pet': function () {
         var petId = this.petId();
 
         // Check Template.onCreate

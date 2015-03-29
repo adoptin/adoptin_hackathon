@@ -1,7 +1,7 @@
 Meteor.methods({
-   'pet/add': function(newPet) {
+    'pet/add': function (newPet) {
 
-        if (! Meteor.userId()) {
+        if (!Meteor.userId()) {
             throw new Meteor.Error("not-authorized");
         }
 
