@@ -9,10 +9,11 @@ Template.addAnimal.events({
 		};
 		Meteor.call('pet/add', newPet, function(err, result){
 			if (err || result == 0) {
-				alert('It didn\'t work!');
+				bootbox.alert('It didn\'t work!');
 			} else {
-				alert('Pet added!');
-				FlowRouter.go('/');
+				bootbox.alert('Pet added!', function(){
+					FlowRouter.go('/');
+				});
 			}
 		});
 		
