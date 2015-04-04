@@ -1,0 +1,17 @@
+<template name="aboutUs">
+<!-- ionNavBar -->
+{{#contentFor "headerButtonLeft"}}
+	{{>ionNavBackButton path="pets" text="Back"}}
+{{/contentFor}}
+
+{{#contentFor "headerTitle"}}
+	<h1 class="title">About adopt.im</h1>
+{{/contentFor}}
+<!-- ionView + ionContent -->
+{{#ionView}}
+	{{#ionContent}}
+	<h1>About us</h1>
+	<p>This is a page about us.</p>
+	{{/ionContent}}
+{{/ionView}}
+</template>
