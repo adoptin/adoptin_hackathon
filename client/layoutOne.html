@@ -1,9 +1,13 @@
 <template name="layoutOne">
   {{#ionBody}}
-
     {{> ionNavBar class="bar-positive"}}
-    
-    {{> yield}}
-    
+    {{#ionNavView}}
+    	{{> yield}}
+    {{/ionNavView}}
+    {{#ionTabs class="tabs-positive tabs-icon-top"}}
+  		{{> ionTab title="Home" path="petsList" iconOff="navicon" iconOn="navicon-round"}}
+  		<button class="button button-clear" data-ion-modal="_addPet">{{> ionIcon icon="ios-plus-empty"}}</button><br/>
+  		{{> ionTab title="Watchlist" path="petsInWatchlist" iconOff="star" iconOn="star"}}
+	{{/ionTabs}}
   {{/ionBody}}
 </template>

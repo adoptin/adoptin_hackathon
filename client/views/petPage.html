@@ -1,0 +1,36 @@
+<template name="petPage">
+
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="petsList" text="Pets"}}
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">{{pet.name}}</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+  	{{#ionContent class="padding"}}
+      {{#with pet}}
+        <img src="/pictures/{{petImage}}" class="img-responsive">
+        <kbd>_id: {{_id}}</kbd>
+        <h1>{{name}}</h1>
+        <p>{{location}}</p>
+        <p>{{breed}}</p>
+        <p>{{owner}}</p>
+        <button class="button button-block button-energized" data-action="fake">Contact rescuer</button>
+        <div class="item tabs tabs-secondary tabs-icon-left">
+          <a class="tab-item" href="#" data-action="fake">
+            <i class="icon ion-social-facebook-outline"></i>
+           </a>
+          <a class="tab-item" href="#" data-action="fake">
+            <i class="icon ion-social-twitter"></i>
+          </a>
+          <a class="tab-item" href="#" data-action="fake">
+            <i class="icon ion-email"></i>
+          </a>
+        </div>
+      {{/with}}
+  	{{/ionContent}}
+  {{/ionView}}
+
+</template>

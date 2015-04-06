@@ -1,10 +1,10 @@
-Template.pets.created = function () {
+Template.petsList.created = function () {
 	this.autorun(function () {
-		this.subscription = Meteor.suscribe('allpets');
+		this.subscription = Meteor.subscribe('allPets');
 	}.bind(this));
 };
 
-Template.pets.rendered = function () {
+Template.petsList.rendered = function () {
 	this.autorun(function () {
     	if (!this.subscription.ready()) {
       		IonLoading.show();
@@ -14,8 +14,8 @@ Template.pets.rendered = function () {
     }.bind(this));
 };
 	
-Template.pets.helpers ({
-	petsd: function() {
+Template.petsList.helpers ({
+	pets: function() {
 		return Pets.find();
 	}
 });

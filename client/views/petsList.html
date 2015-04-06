@@ -1,0 +1,21 @@
+<template name="petsList">
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">adopt.im</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+      {{#ionList}}
+      	{{#each pets}}
+      		{{#ionItem path="petPage" buttonRight=true thumbnail=true class="item-icon-right"}}
+      			<h2>{{name}}</h2>
+      			<span>{{breed}}</span>
+      			{{> ionIcon icon="ios-arrow-forward" class="positive"}}
+      		{{/ionItem}}
+      	{{/each}}
+      {{/ionList}}
+    {{/ionContent}}
+  {{/ionView}}
+
+</template>

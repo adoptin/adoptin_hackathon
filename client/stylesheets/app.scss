@@ -1,4 +1,11 @@
-$loading-font-size: 22px;
+// Custom
+@import '_app-variables';
 
+// Ionic
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic';
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';
+
+.img-responsive {
+	width: 100%;
+	height: auto;
+}
